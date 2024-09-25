@@ -32,7 +32,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Will Cote",
     role: "Head of Strategy",
-    description: "A mathemtics major with extensive experience with modelling and simulation.",
+    description: "A mathematics major with extensive experience with modelling and simulation.",
     imageUrl: "/images/willcote.jpeg?height=200&width=200",
   },
   {
