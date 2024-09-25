@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Linkedin, Instagram, Mail } from "lucide-react"
 import Header from '@/components/ui/header';
+import Footer from '@/components/ui/footer';
 
 
 export function LandingPage() {
@@ -138,11 +139,11 @@ export function LandingPage() {
         }}
         className="absolute inset-0 z-0 pointer-events-none"
       /> */}
-      <Header/>
+      <Header />
       <main className="flex-1 z-10">
-      <section ref={landingRef} className={`w-full section-minus-navbar h-screen flex justify-center items-center bg-[url('/images/SCQBackground.jpg')] bg-cover bg-center transition-opacity duration-500 ${showLanding ? 'opacity-100' : 'opacity-0'}`}>
+        <section ref={landingRef} className={`w-full section-minus-navbar h-screen flex justify-center items-center bg-[url('/images/SCQBackground.jpg')] bg-cover bg-center transition-opacity duration-500 ${showLanding ? 'opacity-100' : 'opacity-0'}`}>
 
-      <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                 Santa Clara Quant
@@ -171,8 +172,11 @@ export function LandingPage() {
                   </CardDescription>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">Read More</Button>
-                </CardFooter>
+                  <Link href="/projects">
+                    <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                      Read More
+                    </Button>
+                  </Link>                </CardFooter>
               </Card>
               <Card className="bg-gray-800 text-white">
                 <CardHeader>
@@ -184,8 +188,11 @@ export function LandingPage() {
                   </CardDescription>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">Read More</Button>
-                </CardFooter>
+                  <Link href="/projects">
+                    <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                      Read More
+                    </Button>
+                  </Link>                </CardFooter>
               </Card>
               <Card className="bg-gray-800 text-white">
                 <CardHeader>
@@ -197,43 +204,18 @@ export function LandingPage() {
                   </CardDescription>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">Read More</Button>
+                  <Link href="/projects">
+                    <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                      Read More
+                    </Button>
+                  </Link>
                 </CardFooter>
               </Card>
             </div>
           </div>
         </section>
       </main>
-      <footer className="w-full py-6 bg-black-800 z-10 flex justify-center">
-        <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            <div className="flex justify-center md:justify-start space-x-4">
-              <Link href="https://www.linkedin.com/company/santa-clara-quant" className="text-white hover:text-gray-300" target="_blank" rel="noreferrer">
-                <Linkedin className="h-6 w-6" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link href="#" className="text-white hover:text-gray-300">
-                <Instagram className="h-6 w-6" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="mailto:contact@santaclaraquant.com" className="text-white hover:text-gray-300">
-                <Mail className="h-6 w-6" />
-                <span className="sr-only">Email</span>
-              </Link>
-            </div>
-            <div className="flex justify-center">
-              <Button className="bg-white text-black hover:bg-gray-200">
-                <Link href="https://forms.gle/EcDpQdNGLALuk4to8" target="_black" rel="noreferrer">
-                  Sign up to our mailing list
-                </Link>
-              </Button>
-            </div>
-            <div className="text-center md:text-right text-sm text-gray-400">
-              ©2024 by Santa Clara Quant
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

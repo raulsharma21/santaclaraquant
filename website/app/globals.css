@@ -90,6 +90,10 @@ body {
   height: calc(100vh - 56px);
 }
 
+.event-grid {
+  height: calc(100vh - 230px);
+}
+
 @layer base {
   * {
     border: var(--border);
@@ -98,4 +102,31 @@ body {
     background: var(--background);
     color: var(--foreground);
   }
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #000; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3b3a3a; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Roundness of the scrollbar thumb */
+  border: 3px solid #000; /* Padding around the scrollbar thumb */
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Equal-sized squares */
+  gap: 10px; /* Even spacing between grid items */
+}
+
+.calendar-grid > div {
+  /* To ensure content doesn't expand the grid items */
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis;
 }
