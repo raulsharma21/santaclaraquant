@@ -20,7 +20,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Tristan Poul",
     role: "Vice-President",
-    description: "A economics major with a passion for data analytics.",
+    description: "An economics major with a passion for data analytics.",
     imageUrl: "/images/tristanpoul.jpeg?height=200&width=200",
   },
   {
@@ -38,7 +38,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Jeevan Brar",
     role: "Head of Operations",
-    description: "A economics major and data analytics minor with experience in trading and business development.",
+    description: "An economics major and data analytics minor with experience in trading and business development.",
     imageUrl: "/images/jeevanbrar.jpeg?height=200&width=200",
   },
 ]
