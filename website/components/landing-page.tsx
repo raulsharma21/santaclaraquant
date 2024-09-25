@@ -145,12 +145,13 @@ export function LandingPage() {
 
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Santa Clara Quant
-              </h1>
-              <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl">
-                Santa Clara University's Quantitative Finance Organization
-              </p>
+            <h1 className="text-6xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
+  Santa Clara Quant
+</h1>
+<p className="mx-auto max-w-[700px] text-gray-300 text-base sm:text-xl md:text-2xl lg:text-3xl">
+  Santa Clara University's Quantitative Finance Organization
+</p>
+
               {/* <Button className="mt-6 bg-white text-black hover:bg-gray-200">Learn More</Button> */}
             </div>
           </div>

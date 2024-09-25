@@ -12,7 +12,7 @@ return(
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="#" className="text-white hover:text-gray-300">
+              <Link href="https://www.instagram.com/scuquant?igsh=MzRlODBiNWFlZA==" className="text-white hover:text-gray-300" target="_blank">
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
               </Link>
