@@ -4,7 +4,6 @@ import { useRef, useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Linkedin, Instagram, Mail } from "lucide-react"
 import Header from '@/components/ui/header';
 import Footer from '@/components/ui/footer';
 
@@ -28,27 +27,23 @@ export function LandingPage() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setShowSecondScreen(true)
+          setShowSecondScreen(true);
         }
       },
       { threshold: 0.1 }
-    )
+    );
 
-    if (secondScreenRef.current) {
-      observer.observe(secondScreenRef.current)
+    const currentRef = secondScreenRef.current; // Copy ref value to a variable
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (secondScreenRef.current) {
-        observer.unobserve(secondScreenRef.current)
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
-    }
-  }, [])
-
-  const handleMailingListSignup = () => {
-    console.log("Mailing list signup clicked")
-    // Handle mailing list signup here
-  }
+    };
+  }, []);
 
   useEffect(() => {
     // Show the landing section immediately or with minimal delay
@@ -145,12 +140,12 @@ export function LandingPage() {
 
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
-            <h1 className="text-6xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
-  Santa Clara Quant
-</h1>
-<p className="mx-auto max-w-[700px] text-gray-300 text-base sm:text-xl md:text-2xl lg:text-3xl">
-  Santa Clara University's Quantitative Finance Organization
-</p>
+              <h1 className="text-6xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
+                Santa Clara Quant
+              </h1>
+              <p className="mx-auto max-w-[700px] text-gray-300 text-base sm:text-xl md:text-2xl lg:text-3xl">
+                Santa Clara University&apos;s Quantitative Finance Organization
+              </p>
 
               {/* <Button className="mt-6 bg-white text-black hover:bg-gray-200">Learn More</Button> */}
             </div>

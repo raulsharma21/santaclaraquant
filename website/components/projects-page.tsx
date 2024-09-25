@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import Link from "next/link"
 import Header from '@/components/ui/header'; // Adjust the import path if necessary
 import Footer from '@/components/ui/footer'; // Adjust the import path if necessary
-import Head from "next/head";
+import Image from 'next/image';
+
 
 const projects = [
   {
@@ -42,7 +43,13 @@ export default function ProjectsPage() {
             <Card key={project.id} className="bg-gray-800 border-gray-700 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-red-900/50 hover:bg-gray-700 flex flex-col">
               <CardHeader className="p-6 pb-0">
                 <div className="overflow-hidden rounded-lg mb-4">
-                  <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={500}  // Set a specific width (adjust as needed)
+                    height={200} // Set a specific height (adjust as needed)
+                    className="w-full h-48 object-cover"
+                  />
                 </div>
                 <CardTitle className="text-xl font-semibold text-white">{project.title}</CardTitle>
               </CardHeader>
