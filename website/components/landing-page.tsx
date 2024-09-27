@@ -160,11 +160,11 @@ export function LandingPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="bg-gray-800 text-white">
                 <CardHeader>
-                  <CardTitle>Algorithmic Trading</CardTitle>
+                  <CardTitle>Interactive Options Pricing Model</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Developing and backtesting quantitative trading strategies using machine learning algorithms.
+                  Developed a Black-Scholes model for pricing European options with adjustments for changes in volatility and market conditions.
                   </CardDescription>
                 </CardContent>
                 <CardFooter>
@@ -176,11 +176,11 @@ export function LandingPage() {
               </Card>
               <Card className="bg-gray-800 text-white">
                 <CardHeader>
-                  <CardTitle>Risk Management</CardTitle>
+                  <CardTitle>Double Moving Average Strategy</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Building models to assess and manage financial risks in investment portfolios.
+                    Implemented a moved-average crossovers strategy using R to better returns and reduce risk on an equity.
                   </CardDescription>
                 </CardContent>
                 <CardFooter>
@@ -192,11 +192,11 @@ export function LandingPage() {
               </Card>
               <Card className="bg-gray-800 text-white">
                 <CardHeader>
-                  <CardTitle>Blockchain Analytics</CardTitle>
+                  <CardTitle>Arbitrage Sports Betting Algorithm</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Analyzing blockchain data to derive insights and predict cryptocurrency market trends.
+                  Designed a web scraping and betting strategy using odds from multiple books and statistical arbitrage.
                   </CardDescription>
                 </CardContent>
                 <CardFooter>
