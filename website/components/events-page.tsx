@@ -12,7 +12,7 @@ const events = [
   { id: 1, date: "2024-09-26", title: "Campus Fair", content: "Outside SCIDI from 5pm" },
   { id: 2, date: "2024-10-29", title: "Guest Speaker!" },
   { id: 3, date: "2024-10-03", title: "Weekly Meeting", content: "Details to follow" },
-  { id: 4, date: "2025-1-23", title: "Winter Workshop", content: "Kenna 111" },
+  { id: 4, date: "2025-01-23", title: "Winter Workshop", content: "Kenna 111" },
 ];
 
 export function EventsPage() {
