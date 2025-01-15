@@ -29,7 +29,7 @@ return(
               </Button>
             </div>
             <div className="text-center md:text-right text-sm text-gray-400">
-              ©2024 by Santa Clara Quant
+              ©2025 by Santa Clara Quant
             </div>
           </div>
         </div>
