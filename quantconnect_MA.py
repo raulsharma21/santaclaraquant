@@ -25,15 +25,6 @@ class QuantLeague(QCAlgorithm):
         self.invested = False
         self.buy_order_sent = False
 
-
-        # Create a custom chart for Moving Averages and Portfolio Value
-        chart = Chart("Performance")
-        # chart.AddSeries(Series("3-Day", SeriesType.Line, 0))
-        # chart.AddSeries(Series("20-Day", SeriesType.Line, 0))
-        # chart.AddSeries(Series("Total Value", SeriesType.Line, 1))  # New series for total strategy value
-        # chart.AddSeries(Series("Buy and Hold", SeriesType.Line, 1))
-        self.AddChart(chart)
-
     def on_data(self, data):      
         if self.is_warming_up:
             return
