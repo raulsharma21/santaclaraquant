@@ -1,3 +1,6 @@
+# Santa Clara Quant Winter Workshop
+# Moving Average Crossover Strategy for QuantConnect
+
 # region imports
 from AlgorithmImports import *
 from datetime import timedelta
