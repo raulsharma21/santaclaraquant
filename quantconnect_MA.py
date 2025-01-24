@@ -29,7 +29,6 @@ class QuantLeague(QCAlgorithm):
 
         self.buy_and_hold_initialized = False
         self.invested = False
-        # self.buy_order_sent = False
 
     def on_data(self, data):      
         if self.is_warming_up:
