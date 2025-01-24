@@ -8,34 +8,37 @@ from datetime import timedelta
 
 class QuantLeague(QCAlgorithm):
     def initialize(self):
+
+        # Timeframe for the backtest
         self.set_start_date(2020, 1, 1)
         self.set_end_date(2024, 1, 1)
+
+        # Initial cash balance
         self.INIT_CASH = 1000000
         self.set_cash(self.INIT_CASH)
 
-        # Warm up the algorithm with historical data
+        # Warm up the algorithm with historical data to calculate Moving Averages
         self.set_warm_up(timedelta(days=20))
 
+        # Tell the algorithm that we want information about SPY everyday
         self.symbol = self.add_equity("SPY", Resolution.Daily).Symbol
-        self.initialized = False
 
+        # Tell the algo that we want to keep calculating the moving averages
         self.fast_ma = self.sma(self.symbol, 3, Resolution.Daily)
         self.slow_ma = self.sma(self.symbol, 20, Resolution.Daily)
 
+        self.buy_and_hold_initialized = False
         self.invested = False
-        self.buy_order_sent = False
+        # self.buy_order_sent = False
 
     def on_data(self, data):      
         if self.is_warming_up:
             return
 
-        if not self.initialized:
+        if not self.buy_and_hold_initialized:
             self.buy_and_hold_shares = self.INIT_CASH / self.Securities[self.symbol].Price
-            print(self.buy_and_hold_shares)
-            self.initialized = True
-
-        print(self.fast_ma)
-        print(self.slow_ma)
+            self.Log("Bought " + str(self.buy_and_hold_shares) + " shares")
+            self.buy_and_hold_initialized = True
 
         self.UpdatePlot()
 
