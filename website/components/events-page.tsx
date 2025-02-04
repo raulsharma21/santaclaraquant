@@ -13,6 +13,8 @@ const events = [
   { id: 2, date: "2024-10-29", title: "Guest Speaker!" },
   { id: 3, date: "2024-10-03", title: "Weekly Meeting", content: "Details to follow" },
   { id: 4, date: "2025-01-23", title: "Winter Workshop", content: "Kenna 111, 6pm", link: "https://www.google.com/calendar/render?action=TEMPLATE&text=Winter%20Workshop&dates=20250124T020000Z/20250124T030000Z&details=Join%20us%20at%20Kenna%20111%20for%20our%20Winter%20Workshop.&location=Kenna%20111&sf=true&output=xml" },
+  { id: 5, date: "2025-02-12", title: "QuantConnect Clinic", content: "Lucas 206, 7pm", link: "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=N2ljY2NqZDIwb3V1azFhZzVoYmVuYzJmazQgcnNoYXJtYTdAc2N1LmVkdQ&tmsrc=rsharma7%40scu.edu" },
+  
 ];
 
 export function EventsPage() {
@@ -82,7 +84,7 @@ export function EventsPage() {
                       </div>
                       {eventForDay && (
                         <div className="flex items-center justify-center text-center w-full h-full p-2">
-                          <span className="text-[#b30738] text-med leading-tight break-words overflow-hidden">
+                          <span className="text-[#b30738] text-sm leading-tight break-words overflow-hidden">
                             {eventForDay.title}
                             {eventForDay.content && (
                               <span className="block text-sm text-gray-500 mt-1">
